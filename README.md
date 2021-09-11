@@ -90,7 +90,7 @@ Example for singular matrix:
 [[nan, nan, nan], [nan, nan, nan], [nan, nan, nan]]
 # Means that matrix is singular (no inversible)
 ```
-## Adjugate of a matrix
+## Cofactor matrix
 Call the `cofactor()` method
 ```python
 >>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
