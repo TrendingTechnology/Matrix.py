@@ -111,6 +111,7 @@ Call the `adjugate()` method
 ## Row reduction
 From [**sites.millersville.edu**](https://sites.millersville.edu/bikenaga/linear-algebra/row-reduction/row-reduction.html):
 > Row reduction (or Gaussian elimination) is the process of using row operations to reduce a matrix to row reduced echelon form. This procedure is used to solve systems of linear equations, invert matrices, compute determinants, and do many other things.
+
 Call the `row_reduction()` method to reduce a matrix:
 ```python
 >>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
