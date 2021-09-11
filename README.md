@@ -24,10 +24,13 @@ Create and print a Matrix
 
 # Create instance
 >>> x = Matrix([1, 2, 3])
+>>> y = Matrix([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
 
 # Print instance
 >>> print(x.matrix)
-[1, 2, 3]
+[[1, 2, 3]]
+>>> print(y.matrix)
+[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 ```
 ### Sum
 Now let's sum another matrix to the instance using the `sum()` method:
@@ -36,10 +39,10 @@ Now let's sum another matrix to the instance using the `sum()` method:
 # [1, 2, 3] + [3, 2, 1] = [4, 4, 4]
 
 >>> print(y.matrix)
-[4, 4, 4]
+[[4, 4, 4]]
 ```
 ### Multiply
-Example of how to multiply matrixes. Remember that some multiply operations between matrixes are incompatible because of their sizes.
+Example of how to multiply matrixes using the `multiply()` method. Remember that some multiply operations between matrixes are incompatible because of their sizes.
 ```python
 >>> x = Matrix([1, 2, 3])
 >>> z = x.multiply([[1], [2], [3]])
@@ -49,4 +52,30 @@ Example of how to multiply matrixes. Remember that some multiply operations betw
 
 >>> print(z.matrix)
 [[14]]
+```
+## Transpose a matrix
+```python
+>>> x = Matrix([1, 2, 3])
+>>> z = x.transpose()
+
+>>> print(z.matrix)
+[[1], [2], [3]]
+```
+## Inverse of a matrix
+Example for regular matrix:
+```python
+>>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
+>>> z = x.inverse()
+
+>>> print(z.matrix)
+[[-0.375, 0.375, 0.25], [0.5, -0.0, -0.5], [0.125, -0.125, 0.25]]
+```
+Example for singular matrix:
+```python
+>>> x = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+>>> z = x.inverse()
+
+>>> print(z.matrix)
+[[nan, nan, nan], [nan, nan, nan], [nan, nan, nan]]
+# Means that matrix is singular (no inversible)
 ```
