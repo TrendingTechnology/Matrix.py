@@ -6,9 +6,9 @@
 [![GitHub tag](https://img.shields.io/github/tag/AlexSp3/matrix.py.svg)](https://github.com/AlexSp3/matrix.py/releases)
 
 ---
-<!---A **Python** library that allows you to make algebraic operations with **1D and 2D arrays**--->
+A **Python** library that allows you to make algebraic operations with **1D and 2D arrays**
 
-Clear [**documentation**](https://github.com/AlexSp3/matrix.py.js/wiki) and [**tests**](https://github.com/AlexSp3/matrix.py.js/wiki/Tests).
+<!---Clear [**documentation**](https://github.com/AlexSp3/matrix.py.js/wiki) and [**tests**](https://github.com/AlexSp3/matrix.py.js/wiki/Tests).--->
 
 ## Description
 * Work with vectors and matrixes in an easy way.
