@@ -54,6 +54,7 @@ Example of how to multiply matrixes using the `multiply()` method. Remember that
 [[14]]
 ```
 ## Transpose a matrix
+Call the `transpose()` method.
 ```python
 >>> x = Matrix([1, 2, 3])
 >>> z = x.transpose()
@@ -62,7 +63,7 @@ Example of how to multiply matrixes using the `multiply()` method. Remember that
 [[1], [2], [3]]
 ```
 ## Inverse of a matrix
-Example for regular matrix:
+Call the `inverse()` method. Example for regular matrix:
 ```python
 >>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
 >>> z = x.inverse()
@@ -79,3 +80,21 @@ Example for singular matrix:
 [[nan, nan, nan], [nan, nan, nan], [nan, nan, nan]]
 # Means that matrix is singular (no inversible)
 ```
+## Adjugate of a matrix
+Call the `adjugate()` method
+```python
+>>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
+>>> z = x.adjugate()
+
+>>> print(z.matrix)
+[[6, -6, -4], [-8, 0, 8], [-2, 2, -4]]
+```
+
+## Can I contribute?
+Of course you can! Contributers are necessary for mantaining and improve the library. If you want to contribute, do not hesitate to make a [**pull request**](https://github.com/AlexSp3/matrix.py/pulls). If you need some information on how to contribute on a Github project, [**this reading**](https://gist.github.com/MarcDiethelm/7303312)  might be useful.
+
+<!---## Website
+### [https://alexsp3.github.io/matrix.py](https://alexsp3.github.io/matrix.py)--->
+
+---
+Open source [**MIT License**](LICENSE)
