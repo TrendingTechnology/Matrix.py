@@ -6,7 +6,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/AlexSp3/matrix.py.svg)](https://github.com/AlexSp3/matrix.py/releases)
 
 ---
-A **Python** library that allows you to make algebraic operations with **1D and 2D arrays**
+<!---A **Python** library that allows you to make algebraic operations with **1D and 2D arrays**--->
 
 Clear [**documentation**](https://github.com/AlexSp3/matrix.py.js/wiki) and [**tests**](https://github.com/AlexSp3/matrix.py.js/wiki/Tests).
 
@@ -17,3 +17,36 @@ Clear [**documentation**](https://github.com/AlexSp3/matrix.py.js/wiki) and [**t
 * Get the **determinant** and the **range** of a matrix.
 * Little more than **11kb**.
 
+## Usage
+Create and print a Matrix
+```python
+>>> import matrix
+
+# Create instance
+>>> x = Matrix([1, 2, 3])
+
+# Print instance
+>>> print(x.matrix)
+[1, 2, 3]
+```
+### Sum
+Now let's sum another matrix to the instance using the `sum()` method:
+```python
+>>> y = x.sum([3, 2, 1])
+# [1, 2, 3] + [3, 2, 1] = [4, 4, 4]
+
+>>> print(y.matrix)
+[4, 4, 4]
+```
+### Multiply
+Example of how to multiply matrixes. Remember that some multiply operations between matrixes are incompatible because of their sizes.
+```python
+>>> x = Matrix([1, 2, 3])
+>>> z = x.multiply([[1], [2], [3]])
+# [1, 2, 3] * [1] = [14]
+#             [2]
+#             [3]
+
+>>> print(z.matrix)
+[[14]]
+```
