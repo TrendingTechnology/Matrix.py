@@ -16,6 +16,7 @@ A **Python** library that allows you to make algebraic operations with **1D and 
 * Get the `inverse`, `transpose`, `adjugate`, `cofactor` and `row reduced` matrix in a simple line of code.
 * Get the **determinant** and the **range** of a matrix.
 * Little more than **11kb**.
+* No dependencies.
 
 ## Usage
 Create and print a Matrix
