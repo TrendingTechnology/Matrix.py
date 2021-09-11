@@ -41,6 +41,15 @@ Now let's sum another matrix to the instance using the `sum()` method:
 >>> print(y.matrix)
 [[4, 4, 4]]
 ```
+### Subtract
+Now let's subtract another matrix to the instance using the `minus()` method:
+```python
+>>> y = x.sum([3, 2, 1])
+# [1, 2, 3] - [3, 2, 1] = [-2, 0, 2]
+
+>>> print(y.matrix)
+[[-2, 0, 2]]
+```
 ### Multiply
 Example of how to multiply matrixes using the `multiply()` method. Remember that some multiply operations between matrixes are incompatible because of their sizes.
 ```python
@@ -81,6 +90,15 @@ Example for singular matrix:
 # Means that matrix is singular (no inversible)
 ```
 ## Adjugate of a matrix
+Call the `cofactor()` method
+```python
+>>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
+>>> z = x.adjugate()
+
+>>> print(z.matrix)
+[[6, -8, -2], [-6, 0, 2], [-4, 8, -4]]
+```
+## Adjugate of a matrix
 Call the `adjugate()` method
 ```python
 >>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
@@ -88,6 +106,17 @@ Call the `adjugate()` method
 
 >>> print(z.matrix)
 [[6, -6, -4], [-8, 0, 8], [-2, 2, -4]]
+```
+## Row reduction
+From [sites.millersville.edu](https://sites.millersville.edu/bikenaga/linear-algebra/row-reduction/row-reduction.html):
+> Row reduction (or Gaussian elimination) is the process of using row operations to reduce a matrix to row reduced echelon form. This procedure is used to solve systems of linear equations, invert matrices, compute determinants, and do many other things.
+Call the `row_reduction()` method to reduce a matrix:
+```python
+>>> x = Matrix([[1, 2, 3], [3, 2, 1], [1, 0, 3]])
+>>> z = x.row_reduction()
+
+>>> print(z.matrix)
+[[1.0, 0.0, 0.0], [-0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]
 ```
 
 ## Can I contribute?
