@@ -98,7 +98,7 @@ class Matrix:
             Matrix.err('incompatible multiply operation')
 
         # Create empty array with fixed size
-        result = [[0 for _ in range(a.dim_x)] for _ in range(a.dim_y)]
+        result = [[0 for _ in range(b.dim_x)] for _ in range(a.dim_y)]
         # Multiply
         for i in range(b.dim_x):
             for j in range(a.dim_y):
