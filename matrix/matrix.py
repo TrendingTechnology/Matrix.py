@@ -184,7 +184,8 @@ class Matrix:
         for row in self.matrix[:y_idx] + self.matrix[y_idx + 1:]:
             result.append(row[:x_idx] + row[x_idx + 1:])
 
-        return Matrix.finalise(result)
+        # Minor complementary is '1' by default if matrix is size 1 x 1
+        return Matrix.finalise(result if len(result) else [[1]])
 
     # Returns a new Matrix which is the transpose of the instance matrix
     def transpose(self):
@@ -279,7 +280,7 @@ class Matrix:
 
         return self.matrix == self.transpose().matrix
 
-    # Returns True if matrix is equal to its transpose, else returns False
+    # Returns True if matrix is equal to the opposite of its transpose, else returns False
     # a == -(a^-1)
     def is_antisymmetric(self):
         # If isn't square return False
@@ -315,20 +316,17 @@ class Matrix:
         Matrix.external = True
         return m
 
-    # Returns a new Matrix which is the identity matrix with size (dim_y, dim_x)
+    # Returns a new Matrix which is the identity matrix with size (dim, dim)
     @staticmethod
-    def identity(dim_y, dim_x):
-        Matrix.is_valid(dim_y)
-        Matrix.is_valid(dim_x)
-        if dim_x != dim_y or dim_x < 1:
-            Matrix.err('invalid parameters, (' + dim_y + ", " + dim_x + ')')
+    def identity(dim):
+        Matrix.is_valid(dim)
 
         result = []
-        for i in range(dim_y):
+        for i in range(dim):
             row = []
-            for j in range(dim_x):
+            for j in range(dim):
                 row.append(0 if i != j else 1)
             result.append(row)
 
         return Matrix.finalise(result)
-      
+    
