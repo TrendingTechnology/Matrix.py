@@ -8,7 +8,7 @@
 ---
 A **Python** library that allows you to make algebraic operations with **1D and 2D arrays**
 
-Clear and complete [**documentation and tests**](https://github.com/AlexSp3/matrix.py.js/wiki). *This ReadMe doesn't include the full list of functions of the library*.
+Clear and complete [**documentation and tests**](https://github.com/AlexSp3/matrix.py/wiki). *This ReadMe doesn't include the full list of functions of the library*.
 
 ## Description
 * Work with vectors and matrixes in an easy way.
