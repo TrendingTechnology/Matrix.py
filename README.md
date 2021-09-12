@@ -64,6 +64,10 @@ Example of how to multiply matrixes using the `multiply()` method. Remember that
 [[14]]
 ```
 ## Transpose a matrix
+Image from [**Cuemath**](https://www.cuemath.com/algebra/transpose-of-a-matrix/)
+
+![image](https://user-images.githubusercontent.com/37636391/132967503-aa26f6c5-1a4b-4580-a374-b69126852214.png)
+
 Call the `transpose()` method.
 ```python
 >>> x = Matrix([1, 2, 3])
